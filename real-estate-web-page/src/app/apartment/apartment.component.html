@@ -1,20 +1,15 @@
-<p>apartment works!</p>
+
 <div class="container">
-        <!-- <li *ngFor="let el of apartments"> -->
-
-        <!-- <div class="card" style="width: 18rem;"> -->
-            <div class="card-component" *ngFor="let el of apartments">
-                <div class="card-body">
-                    <h5 class="card-title">{{el.name}}</h5>
-                    <img class="card-img-top" src="{{el.pictures}}" alt="Card image cap" width="350" height="350" id="img">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">View details</a>
-                </div>
-            <!-- </div> -->
-
+    <div class="card" *ngFor="let el of apartments">
+        <div class="card-body">
+            <h5 class="card-title">{{el.name}}</h5>
+            <img class="card-img-top" src="{{el.pictures}}" alt="Card image cap" width="350" height="350" id="img">
+            <p class="card-text"><strong>Location:</strong> {{el.location}}</p>
+            <p class="card-text"><strong>Price:</strong> {{el.price}} euro.</p>
+            <p class="card-text"><strong>Is the property for major service:</strong> {{el.service? 'YES' : 'NO'}}</p>
+            <p class="card-text"><strong>More about the flat:</strong> <br>
+                {{el.description}}.</p>
+            <a routerLink="/apartments/details/{{el.id}}" class="btn btn-primary" style="background-color: #6C757D;">View details</a>
         </div>
-        <!-- <img src="{{el.pictures}}" alt="" width="300" height="300"> -->
-    <!-- </li> -->
-
-</div>>
+    </div>
+</div>

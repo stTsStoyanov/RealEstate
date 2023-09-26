@@ -12,7 +12,7 @@ import { ApartmentComponent } from './apartment/apartment.component';
 export class AppComponent {
   constructor(private apartmentService:ApartmentService){}
 
-  title = "The best Real Estate company in Bulgaria!"
+  title = "S&K Real Estate, the best Real Estate company in Bulgaria!"
   
   // apartments: Apartment[] = [];
 

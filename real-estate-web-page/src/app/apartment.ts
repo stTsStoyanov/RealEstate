@@ -5,5 +5,6 @@ export interface Apartment {
     id:number;
     service: boolean;
     price: number;
-    pictures:Array<string>
+    pictures:Array<string>;
+    description: string;
 }

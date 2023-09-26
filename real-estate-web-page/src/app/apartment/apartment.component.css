@@ -1,19 +1,33 @@
-.container{
+.container {
+    max-width: 100%;
+    overflow-x: auto;
     display: flex;
-    justify-content: space-between;
-    width: 80%;
-    height: 80%
+    flex-wrap: wrap;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* gap: 3%; */
 
 }
 
-.card-component{
-    display: flex;
-    flex-direction: wrap;
+.card{
     margin: 1%;
-    
+    height: 100vh;
 }
 
-#img{
-    width: 500px;
+.card-img-top,
+p {
+    max-width: 350px;
+    max-height: 350px;
 }
 
+/* Media Query for Small Screens (e.g., Mobile Phones) */
+@media (max-width: 767px) {
+    .container {
+      flex-direction: column; /* Stack cards vertically on small screens */
+      align-items: center; /* Center cards in the container */
+    }
+  
+    .card {
+      width: 100%; /* Cards take full width on small screens */
+    }
+  }

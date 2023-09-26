@@ -22,4 +22,12 @@ export class ApartmentService {
       tap(_ => console.log('Ok i did something')) //test log
     )
   }
+
+  getApartment(id: number): Observable<Apartment>{
+   const url = `${this.apartmentURL}/${id}`;
+   return this.http.get<Apartment>(url).pipe(
+    tap(_ => console.log(`Fetched apartment with id = ${id}`))
+   )
+  }
+  
 }
