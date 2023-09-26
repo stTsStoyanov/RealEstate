@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%
+
+}
+
+.card-component{
+    display: flex;
+    flex-direction: wrap;
+    margin: 1%;
+    
+}
+
+#img{
+    width: 500px;
+}
+
