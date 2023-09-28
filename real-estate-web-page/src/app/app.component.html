@@ -1,10 +1,27 @@
-<h3 class="titleRe">{{title}}</h3>
 <!-- <app-home-page></app-home-page>
 <app-apartment></app-apartment> -->
-<nav class="btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-secondary" routerLink="/home">Home</button>
-    <button type="button" class="btn btn-secondary" routerLink="/apartments">Apartments</button>
-</nav>
-<router-outlet></router-outlet>
-<router-outlet></router-outlet>
-<div></div>
+<div class="appComponent">
+    <nav class="btn-group" role="group" aria-label="Basic example" id="navi">
+        <h3 class="titleRe">{{title}}</h3>
+        <div>
+            <button type="button" class="btn btn-secondary" routerLink="/home">Home</button>
+            <button type="button" class="btn btn-secondary" routerLink="/apartments">Apartments</button>
+        </div>
+    </nav>
+    
+    
+    <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+    
+    <footer>
+        <div>
+            <h3>This Web page contains apartments, houses and lands for sale.</h3>
+        </div>
+        <div>
+            <h4>Created by S&K Clima LTD</h4>
+        </div>
+        <div>
+            <a href="">Contacts</a>
+        </div>
+    </footer>
+</div>

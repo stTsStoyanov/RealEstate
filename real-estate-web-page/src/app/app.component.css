@@ -1,4 +1,47 @@
-.titleRe{
+.appComponent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Set a minimum height to fill the entire viewport */
+}
+
+.titleRe {
     text-align: center;
     position: relative;
+    margin-top: 0.5%;
+}
+
+.btn-group {
+    background: rgb(123, 115, 150);
+    background: linear-gradient(90deg, rgba(123, 115, 150, 1) 0%, rgba(209, 209, 209, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+#navi {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    top: 0;
+    
+}
+
+footer {
+    margin-top: auto;
+    /* Push the footer to the bottom */
+    text-align: center;
+    /* background-color: #333; Add a background color to the footer */
+    background: rgb(123, 115, 150);
+    background: linear-gradient(90deg, rgba(123, 115, 150, 1) 0%, rgba(209, 209, 209, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    nav, footer{
+        width: 100vh;
+    }
 }
