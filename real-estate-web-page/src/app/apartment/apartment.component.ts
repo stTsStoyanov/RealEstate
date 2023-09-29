@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apartment } from '../apartment';
 import { ApartmentService } from '../apartment.service';
+import { ApartmentSearchComponent } from '../apartment-search/apartment-search.component';
 
 @Component({
   selector: 'app-apartment',

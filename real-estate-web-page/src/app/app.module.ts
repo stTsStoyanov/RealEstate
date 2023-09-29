@@ -10,14 +10,16 @@ import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
 import { InMemoryDataService } from './in-memory-data.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomePageComponent } from './home-page/home-page.component';
-import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component'; 
+import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
+import { ApartmentSearchComponent } from './apartment-search/apartment-search.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     ApartmentComponent,
     HomePageComponent,
-    ApartmentDetailsComponent
+    ApartmentDetailsComponent,
+    ApartmentSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import { ApartmentDetailsComponent } from './apartment-details/apartment-details
       InMemoryDataService, { dataEncapsulation: false }
     ),
   ],
-  providers: [],
+  providers: [ApartmentDetailsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

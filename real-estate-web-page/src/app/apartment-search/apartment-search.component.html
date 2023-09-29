@@ -1,0 +1,64 @@
+<!-- <div>
+    <label for="">Search for property by name</label>
+    <input #searchBox (input)="search(searchBox.value)" />
+
+    <div>
+        <p *ngIf="!searchBox.value.length">There is no such offer</p>
+ 
+        <ul>
+            <li *ngFor="let ap of apartment$ | async">
+                <p>result: {{ap.name}}</p>
+                <a routerLink="/apartments/details/{{ap.id}}" style="color: black;">Go to the offer</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div>
+    <label for="">Search by maximum price</label>
+    <input #searchPrice (input)="price(searchPrice.value)">
+
+    <div>
+        <p *ngIf="!searchPrice.value">There is no such offer</p>
+ 
+        <ul>
+            <li *ngFor="let ap of price$ | async">
+                <p>result: {{ap.name}}</p>
+                <a routerLink="/apartments/details/{{ap.id}}" style="color: black;">Go to the offer</a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+
+<div>
+    <label for="">Search for property by name</label>
+    <input #searchBox (input)="search(searchBox.value)" />
+
+    <div>
+        <p *ngIf="searchBox.value.length === 0">There is no such offer</p>
+ 
+        <ul>
+            <li *ngFor="let ap of apartment$ | async">
+                <p>result: {{ap.name}}</p>
+                <a routerLink="/apartments/details/{{ap.id}}" style="color: black;">Go to the offer</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div>
+    <label for="">Search by maximum price</label>
+    <input #searchPrice (input)="price(searchPrice.value)">
+    <div>
+        <p *ngIf="searchPrice.value === ''">There is no such offer</p>
+ 
+        <ul>
+            <li *ngFor="let ap of price$ | async">
+                <p>result: {{ap.name}}</p>
+                <a routerLink="/apartments/details/{{ap.id}}" style="color: black;">Go to the offer</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
