@@ -38,15 +38,34 @@ export class ApartmentService {
     return this.http.get<Apartment[]>(`${this.apartmentURL}/?name=${term}`);
   }
 
-  searchPrice(price: number): Observable<Apartment[]>{
-    if(!price){
-      return of([])
-    }
+  // searchPrice(price: number): Observable<Apartment[]>{
+  //   if(!price){
+  //     return of([])
+  //   }
 
-    // return this.http.get<Apartment[]>(`${this.apartmentURL}/?price<=${price}`).pipe(
-    return this.http.get<Apartment[]>(`${this.apartmentURL}/?price=${price}&price_lte=${price}`).pipe(
-      tap(_ =>{ console.log('lololololololololololo');})
-    )
+  //   // return this.http.get<Apartment[]>(`${this.apartmentURL}/?price<=${price}`).pipe(
+  //   return this.http.get<Apartment[]>(`${this.apartmentURL}/?price=${price}&price_lte=${price}`).pipe(
+  //     tap(_ =>{ console.log('lololololololololololo');})
+  //   )
+  // }
+
+  searchPrice(price: number): Observable<Apartment[]> {
+    if (!price) {
+      return of([]);
+    }
+  
+    // Construct the URL to search for apartments with the given price
+    return this.http.get<Apartment[]>(`${this.apartmentURL}/?price=${price}`);
   }
+
+  // searchPrice(price: number): Observable<Apartment[]> {
+  //   if (!price) {
+  //     return of([]);
+  //   }
+  
+  //   // Construct the URL to search for apartments with a price less than or equal to the specified value
+  //   return this.http.get<Apartment[]>(`${this.apartmentURL}/?price_lte=${price}`);
+  // }
+  
 
 }
