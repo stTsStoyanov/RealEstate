@@ -4,10 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Must before run
 
-1) step one
+1) step one:
   npm install
 
-2) step two
+2) step two:
    npm install angular-in-memory-web-api --save
    
 3) run the dev server
