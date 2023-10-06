@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
+## Must before run
+
+1) step one
+  npm install
+
+2) step two
+   npm install angular-in-memory-web-api --save
+   
+3) run the dev server
+   
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
