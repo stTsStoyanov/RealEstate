@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +13,8 @@ import { InMemoryDataService } from './in-memory-data.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ApartmentDetailsComponent } from './apartment-details/apartment-details.component';
-import { ApartmentSearchComponent } from './apartment-search/apartment-search.component'; 
+import { ApartmentSearchComponent } from './apartment-search/apartment-search.component';
+import { RequestApartmentComponent } from './request-apartment/request-apartment.component'; 
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { ApartmentSearchComponent } from './apartment-search/apartment-search.co
     ApartmentComponent,
     HomePageComponent,
     ApartmentDetailsComponent,
-    ApartmentSearchComponent
+    ApartmentSearchComponent,
+    RequestApartmentComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,8 @@ import { ApartmentSearchComponent } from './apartment-search/apartment-search.co
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+    FormsModule,
+    CommonModule,
   ],
   providers: [ApartmentDetailsComponent],
   bootstrap: [AppComponent]

@@ -1,0 +1,35 @@
+<div [hidden]="submited">
+    <form (ngSubmit)="onSubmit()" #request="ngForm">
+        <div class="form-group">
+            <label for="name">Request made by:</label>
+            <input type="text" class="form-control" id="name" required #name="ngModel" [(ngModel)]="model.name"
+                name="name">
+            <p>{{name.value}}</p>
+        </div>
+        <div class="form-group">
+            <label for="regarding">Regarding property:</label>
+            <input type="text" class="form-control" id="regarding" required #regarding="ngModel"
+                [(ngModel)]="model.regarding" name="regarding">
+            <p>{{regarding.value}}</p>
+        </div>
+        <div class="form-group">
+            <label for="description">Request made by:</label>
+            <input type="text" class="form-control" id="description" required #description="ngModel"
+                [(ngModel)]="model.description" name="description">
+            <p>{{description.value}}</p>
+        </div>
+        <button [disabled]="!request.form.valid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<div [hidden]="!submited">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let request of storage">
+            <h6 class="mb-3">You have submitted</h6>
+            <p><strong>From:</strong> {{request.name}}</p>
+            <p><strong>About flat:</strong> {{request.regarding}}</p>
+            <p><strong>Body of the request:</strong> {{request.description}}</p>
+        </li>
+    </ul>
+</div>
